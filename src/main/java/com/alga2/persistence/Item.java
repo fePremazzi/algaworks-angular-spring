@@ -11,12 +11,13 @@ import javax.validation.constraints.NotNull;
 public class Item {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	@ManyToOne
 	private Venda venda;
 	
+	@ManyToOne
 	@NotNull
 	private Produto produto;
 	
